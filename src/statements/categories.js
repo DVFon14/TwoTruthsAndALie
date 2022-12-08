@@ -143,4 +143,20 @@ const categories = [
   },
 ];
 
+// const pointHandler = () => {
+//   if (categories[0].allStatements[1].isTrue === true) {
+//     alert(
+//       `This is a true statement. The computer wins a point! Its score is ${ComputerScore}`
+//     );
+//     setComputerScore(ComputerScore + 1);
+//   } else if (categories[0].allStatements[0].isTrue === false) {
+//     alert(
+//       `This is a false statement. You win a point! Your score is ${HumanScore}`
+//     );
+//     setHumanScore(HumanScore + 1);
+//   }
+// };
+
+// pointHandler();
+
 export default categories;
