@@ -20,12 +20,12 @@ const categories = [
   {
     Name: "Thomas Edison",
     allStatements: [
-      { Statement: "Edison invented the lightbulb.", isTrue: false },
+      { Statement: "Thomas Edison invented the lightbulb", isTrue: false },
       {
-        Statement: "Edison and Nikola Tesla were contemporaries",
+        Statement: "Thomas Edison and Nikola Tesla were contemporaries",
         isTrue: true,
       },
-      { Statement: "Edison was a telegraph operator", isTrue: true },
+      { Statement: "Thomas Edison was a telegraph operator", isTrue: true },
     ],
   },
   {
@@ -71,7 +71,7 @@ const categories = [
         isTrue: true,
       },
       {
-        Statement: " Hamilton had only sisters-in-laws, no brothers-in-laws",
+        Statement: " Hamilton had only sisters-in-law, no brothers-in-law",
         isTrue: false,
       },
       { Statement: "Hamilton bought and sold slaves", isTrue: true },
@@ -80,9 +80,9 @@ const categories = [
   {
     Name: "Isaac Newton",
     allStatements: [
-      { Statement: "Newton was a knight ", isTrue: true },
-      { Statement: "Newton studied alchemy", isTrue: true },
-      { Statement: "Newton was an atheist", isTrue: false },
+      { Statement: "Isaac Newton was a knight ", isTrue: true },
+      { Statement: "Isaac Newton studied alchemy", isTrue: true },
+      { Statement: "Isaac Newton was an atheist", isTrue: false },
     ],
   },
   {
@@ -142,21 +142,5 @@ const categories = [
     ],
   },
 ];
-
-// const pointHandler = () => {
-//   if (categories[0].allStatements[1].isTrue === true) {
-//     alert(
-//       `This is a true statement. The computer wins a point! Its score is ${ComputerScore}`
-//     );
-//     setComputerScore(ComputerScore + 1);
-//   } else if (categories[0].allStatements[0].isTrue === false) {
-//     alert(
-//       `This is a false statement. You win a point! Your score is ${HumanScore}`
-//     );
-//     setHumanScore(HumanScore + 1);
-//   }
-// };
-
-// pointHandler();
 
 export default categories;

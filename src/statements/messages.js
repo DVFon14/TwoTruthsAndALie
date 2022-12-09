@@ -7,8 +7,7 @@ const instructions = (
 
     <p>
       {" "}
-      Select a given topic, and the computer will generate two truths and a lie
-      about the topic you selected.
+      Below are three statements. Two of them are lies and one of them is true.
     </p>
 
     <p>
@@ -16,6 +15,8 @@ const instructions = (
       Correctly pick the lie and you win a point! If you pick a truth, the
       computer wins a point.
     </p>
+
+    <p>Best two out of three wins. Can you beat the computer?</p>
 
     <p> No Googling on this! Make sure you test your own knowledge.</p>
   </div>
