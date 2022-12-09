@@ -1,7 +1,8 @@
 const instructions = (
   <div>
     <h1>
-      <center>Welcome to TWO TRUTHS AND A LIE!</center>
+      <center>Welcome to </center>
+      <center>TWO TRUTHS AND A LIE!</center>
     </h1>
 
     <p>
