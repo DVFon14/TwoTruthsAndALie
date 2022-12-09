@@ -9,11 +9,6 @@ function App() {
   const [HumanScore, setHumanScore] = useState(1);
   const [questionNum, setQuestionNum] = useState(0);
 
-  const categoryIndex = () => {
-    console.log(`questionNum is: ${questionNum}`);
-    setQuestionNum(questionNum + 1);
-  };
-
   const pointHandler = (isTrue) => {
     if (isTrue === true) {
       alert(
