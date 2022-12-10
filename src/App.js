@@ -62,6 +62,7 @@ function App() {
     if (questionNum === 2 || questionNum === 5 || questionNum === 8) {
       //we need to let them answer questionNum2. AFTER they answer, gray out buttons. Could do by writing just setButtonState(true)
       grayOut();
+      setOpen(true);
     } else {
       setQuestionNum(questionNum + 1);
     }
@@ -128,6 +129,9 @@ function App() {
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               You: {HumanScore} Computer: {ComputerScore}
+              {HumanScore > ComputerScore && <div>You won!</div>}
+              <p></p>
+              {HumanScore < ComputerScore && <div>You lost!</div>}
               <p>Would you like to play again?</p>
             </DialogContentText>
           </DialogContent>
