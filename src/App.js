@@ -19,12 +19,27 @@ function App() {
     setOpen(true);
   };
 
+  const handleNextRound = () => {
+    setOpen(false); //closes the dialog
+    unGrayOut();
+
+    if (questionNum === 8) {
+      setQuestionNum(0);
+    } else {
+      setQuestionNum(questionNum + 1);
+    }
+  };
+
   const handleClose = () => {
     setOpen(false);
   };
 
   const grayOut = () => {
     setButtonState(true);
+  };
+
+  const unGrayOut = () => {
+    setButtonState(false);
   };
 
   const pointHandler = (isTrue) => {
@@ -41,11 +56,6 @@ function App() {
     if (questionNum === 2 || questionNum === 5 || questionNum === 8) {
       //we need to let them answer questionNum2. AFTER they answer, gray out buttons. Could do by writing just setButtonState(true)
       grayOut();
-      //---> set the "buttonState" function as true
-      //we need the dialog box to appear
-      //---> needs to display who won
-      //---> if they click "next round," go to next set of questions -->will this use setQuestionNum(questionNum + 1)?
-      //---> if they click "quit," then exit the program
     } else {
       setQuestionNum(questionNum + 1);
     }
@@ -107,7 +117,7 @@ function App() {
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose}>Next Round</Button>
+            <Button onClick={handleNextRound}>Next Round</Button>
             <Button onClick={handleClose} autoFocus>
               Quit
             </Button>
