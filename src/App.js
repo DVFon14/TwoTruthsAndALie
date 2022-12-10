@@ -15,6 +15,12 @@ function App() {
   const [buttonState, setButtonState] = useState(false);
   const [open, setOpen] = useState(false);
 
+  const resetButton = () => {
+    setHumanScore(0);
+    setQuestionNum(0);
+    unGrayOut();
+  };
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -95,15 +101,24 @@ function App() {
         >
           {categories[questionNum].allStatements[2].Statement}
         </Button>
+
+        <Button
+          variant="text"
+          size="medium"
+          onClick={() => {
+            resetButton();
+          }}
+        >
+          Click here to reset. Your entire progress will be lost.
+        </Button>
       </Stack>
 
       <Stack spacing={5} direction="column" className="App">
-        {/* <Button variant="outlined" size="medium">
-          Click here to go to the next round
-        </Button> */}
-        <Button variant="outlined" onClick={handleClickOpen}>
-          That was the end of the round! Click here to find out the results.
-        </Button>
+        {buttonState && (
+          <Button variant="outlined" onClick={handleClickOpen}>
+            That was the end of the round! Click here to find out the results.
+          </Button>
+        )}
         <Dialog
           open={open}
           onClose={() => {
