@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+//import { useState } from "react";
+
+export default function App() {
+const handleClick = (event) => {
+event.currentTarget.disabled = true;
+console.log("button clicked");
+};
+
+return (
+
+<div>
+{/_ ✅ disable button after it has been clicked once _/}
+<button onClick={handleClick}>Click1</button>
+<br></br>
+
+      {/* ✅ disable button after it has been clicked once */}
+      <button onClick={handleClick}>Click2</button>
+      <br></br>
+
+      {/* ✅ disable button after it has been clicked once */}
+      <button onClick={handleClick}>Click3</button>
+    </div>
+
+);
+}

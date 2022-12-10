@@ -9,8 +9,8 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 
 function App() {
-  const [ComputerScore, setComputerScore] = useState(1);
-  const [HumanScore, setHumanScore] = useState(1);
+  const [ComputerScore, setComputerScore] = useState(0);
+  const [HumanScore, setHumanScore] = useState(0);
   const [questionNum, setQuestionNum] = useState(0);
   const [buttonState, setButtonState] = useState(false);
   const [open, setOpen] = useState(false);
@@ -23,27 +23,27 @@ function App() {
     setOpen(false);
   };
 
-  // const setButtonState = () => {
-  //   buttonState(false);
-  // };
+  const grayOut = () => {
+    setButtonState(true);
+  };
 
   const pointHandler = (isTrue) => {
+    console.log(ComputerScore);
+    console.log(HumanScore);
     if (isTrue === true) {
-      alert(
-        `This is a true statement. The computer wins a point! Its score is ${ComputerScore}`
-      );
       setComputerScore(ComputerScore + 1);
+      alert(`This is a true statement. The computer wins a point!`);
     } else if (isTrue === false) {
-      alert(
-        `This is a false statement. You win a point! Your score is ${HumanScore}`
-      );
       setHumanScore(HumanScore + 1);
+      alert(`This is a false statement. You win a point!`);
     }
 
     if (questionNum === 2 || questionNum === 5 || questionNum === 8) {
-      //we need to let them answer questionNum2. AFTER they answer, gray out buttons
+      //we need to let them answer questionNum2. AFTER they answer, gray out buttons. Could do by writing just setButtonState(true)
+      grayOut();
       //---> set the "buttonState" function as true
       //we need the dialog box to appear
+      //---> needs to display who won
       //---> if they click "next round," go to next set of questions -->will this use setQuestionNum(questionNum + 1)?
       //---> if they click "quit," then exit the program
     } else {
@@ -99,12 +99,11 @@ function App() {
           onClose={() => {
             handleClose();
           }}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
         >
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              You won! Would you like to play again?
+              You: {HumanScore} Computer: {ComputerScore}
+              <p>Would you like to play again?</p>
             </DialogContentText>
           </DialogContent>
           <DialogActions>

@@ -12,7 +12,8 @@ const categories = [
         isTrue: false,
       },
       {
-        Statement: "The U.S Constitution was written on parchment",
+        Statement:
+          "The current U.S Constitution is the second constitution the U.S. has had. ",
         isTrue: true,
       },
     ],
