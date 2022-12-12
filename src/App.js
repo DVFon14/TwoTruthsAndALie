@@ -14,6 +14,7 @@ function App() {
   const [questionNum, setQuestionNum] = useState(0);
   const [buttonState, setButtonState] = useState(false);
   const [open, setOpen] = useState(false);
+  //const [quit, setQuit] = useState(false);
 
   const resetButton = () => {
     setHumanScore(0);

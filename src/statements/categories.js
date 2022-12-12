@@ -68,14 +68,15 @@ const categories = [
     allStatements: [
       {
         Statement:
-          "The Speaker of the House was the one to discover Hamilton was paying off his mistress' husband",
+          "The Speaker of the House was the one to discover that Alexander Hamilton was paying off his mistress' husband",
         isTrue: true,
       },
       {
-        Statement: " Hamilton had only sisters-in-law, no brothers-in-law",
+        Statement:
+          "Alexander Hamilton had only sisters-in-law, no brothers-in-law",
         isTrue: false,
       },
-      { Statement: "Hamilton bought and sold slaves", isTrue: true },
+      { Statement: "Alexander Hamilton bought and sold slaves", isTrue: true },
     ],
   },
   {
