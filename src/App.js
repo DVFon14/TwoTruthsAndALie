@@ -17,6 +17,7 @@ function App() {
 
   const resetButton = () => {
     setHumanScore(0);
+    setComputerScore(0);
     setQuestionNum(0);
     unGrayOut();
   };
